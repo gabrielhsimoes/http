@@ -1,10 +1,6 @@
 {
   "cursos": [
     {
-      "id": 1,
-      "nome": "Angular"
-    },
-    {
       "nome": "Java",
       "id": 2
     },
@@ -13,8 +9,8 @@
       "nome": "Angular Material 765"
     },
     {
-      "nome": "Material",
-      "id": 4
+      "id": 4,
+      "nome": "Material em teste"
     },
     {
       "id": 5,
@@ -43,10 +39,6 @@
     {
       "id": 11,
       "nome": "Material JS 9"
-    },
-    {
-      "id": 12,
-      "nome": "teste"
     }
   ]
 }
