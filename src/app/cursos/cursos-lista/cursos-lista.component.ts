@@ -6,6 +6,7 @@ import { catchError, EMPTY, empty, Observable, Subject, switchMap, take } from '
 import { Curso } from '../curso';
 import { CursosService } from '../cursos.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Cursos2Service } from '../cursos2.service';
 
 @Component({
   selector: 'app-cursos-lista',
@@ -26,7 +27,7 @@ export class CursosListaComponent implements OnInit {
   @ViewChild('deleteModal') deleteModal: any;
 
   constructor(
-    private service: CursosService,
+    private service: Cursos2Service,
     private modalService: BsModalService,
     private alertService: AlertModalService,
     private router: Router,
@@ -89,7 +90,7 @@ export class CursosListaComponent implements OnInit {
   }
 
   onConfirmDelete(){
-    this.service.remove(this.cursoSelecionado.id).subscribe(
+    this.service.remove(this.cursoSelecionado).subscribe(
       success => {
         this.onRefresh(); 
         this.deleteModalRef.hide();
